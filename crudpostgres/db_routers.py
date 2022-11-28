@@ -14,4 +14,5 @@ class student2DBRouter:
         if (model == student2):
         # your model name as in settings.py/DATABASES
             return 'student2'
+            
         return None
