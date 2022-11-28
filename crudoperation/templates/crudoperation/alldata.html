@@ -1,0 +1,65 @@
+{% extends 'crudoperation/base.html' %}
+
+{% block content %}
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+        <div class="alert alert-success">
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>
+            {{ message }}
+            </li>
+        </div>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+
+    <div class="d-flex align-items-center justify-content-center ">
+        <div class="shadow p-3 mb-5 col-lg-6 pt-2 mt-5 ms-3 border rounded solid text-dark bg-info ">
+            
+            <h4 class="text-center">Add your data</h4>
+            {% if error_message %}
+            <p class="text-danger text-center">              
+                    {{error_message}}        
+            </p>
+            {% endif%}
+             <!-- start signup page -->
+             <div>
+              <form action="{% url 'alldata1' %}" method="post" class="ms-3 me-3">
+                {% csrf_token %}
+                  <!-- firstname -->
+                <div class="form-group">
+                    <label for="1" >First Name</label>
+                    <input type="text" name="firstname" class="form-control form-control-sm" id="1" value="{{values.first_name}}" placeholder="">
+                </div>
+                <!-- last name -->
+                <div class="form-group">
+                    <label for="2" >Last Name</label>
+                    <input type="text" name="lastname" class="form-control form-control-sm" id="2" value="{{values.last_name}}" placeholder="">
+                </div>
+    
+                <!-- city -->
+                <div class="form-group">
+                    <label for="2" >City</label>
+                    <input type="text" name="city" class="form-control form-control-sm" id="2" value="{{values.last_name}}" placeholder="">
+                </div>
+                
+            
+                <!-- submit -->
+                <div class="form-group mt-3 mb-2">
+                    <input type="submit" value="Add" class="btn btn-sm btn-dark">
+                    <a href="/crudoperation/home" class="btn btn-sm btn-dark">Back to previous page</a>
+                </div>
+
+             
+                    
+    
+              </form>
+            </div>
+        </div>
+    </div>
+
+
+   
+
+{% endblock content%}

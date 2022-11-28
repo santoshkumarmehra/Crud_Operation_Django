@@ -1,0 +1,22 @@
+{% extends 'crudoperation/base.html' %}
+
+{% block content %}
+
+
+<!-- <div class="m-4 p-4"  > -->
+  <!-- <div class="shadow-sm p-3 mb-5 bg-body rounded">Small shadow</div> -->
+  <span class="shadow-sm pt-2 mt-4 mb-2 btn btn-secondary me-3 d-flex" style="height: 50px;"> <h4> Add your data </h4></span>
+  <a href="/crudoperation/alldata">
+    <!-- <h4 class="ms-3 text">Click here</h4> -->
+    <button class="btn btn-danger ms-0">Click here</button>
+   </a>
+<!-- </div> -->
+<!-- <div class="m-4 p-4"> -->
+    <span class="shadow-sm pt-2 mt-4 mb-2 btn btn-secondary me-3 d-flex" style="height: 50px;"> <h4> Retrieve all data </h4></span>
+    <a href="/crudoperation/retrievedata">
+      <button class="btn btn-success ms-0">Click here</button>
+      <!-- <h4 class="ms-3">Click here</h4> -->
+     </a>
+<!-- </div> -->
+
+{% endblock content %}
