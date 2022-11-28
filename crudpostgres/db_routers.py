@@ -13,6 +13,5 @@ class student2DBRouter:
     def db_for_write (self, model, **hints):
         if (model == student2):
         # your model name as in settings.py/DATABASES
-            return 'student2'
-            
+            return 'student2'            
         return None
